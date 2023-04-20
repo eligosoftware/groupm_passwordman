@@ -1,7 +1,10 @@
+using PasswordMan;
+using PasswordMan.Controllers;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+// Enable Password Repository
+builder.Services.AddScoped<IPasswordRepository, PasswordRepository>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

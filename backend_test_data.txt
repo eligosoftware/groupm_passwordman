@@ -1,0 +1,27 @@
+{
+  "category": "work",
+  "app": "instagram",
+  "userName": "ilgar@ilgar.com",
+  "encryptedPassword": "MySuperPass123"
+}
+
+{
+  "category": "school",
+  "app": "facebook",
+  "userName": "ilgar@ilgar.com",
+  "encryptedPassword": "MyAnotherSuperPass12377"
+}
+
+{
+  "category": "uni",
+  "app": "whatsapp",
+  "userName": "ilgar@ilgar.com",
+  "encryptedPassword": "YetAnotherSuperPass12377_83838"
+}
+
+{
+  "category": "uni",
+  "app": "bosch",
+  "userName": "fira@fira.com",
+  "encryptedPassword": "FiraSupePass_83838"
+}
