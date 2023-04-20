@@ -18,14 +18,14 @@ namespace PasswordMan.Controllers
 
 
         // GET: api/<PasswordController>
-        [HttpGet]
+        [HttpGet("/api/Password/all")]
         public ActionResult<List<Password>> Get()
         {
             return Ok(_passwordRepository.GetAllPasswords());
         }
 
         // GET api/<PasswordController>/5
-        [HttpGet("{username}/{decrypt:int?}")]
+        [HttpGet("/api/Password/user")]
         public ActionResult<List<Password>> Get(string username,int decrypt=0)
         {
             // Convert decrypt parameter from int to bool
@@ -47,7 +47,7 @@ namespace PasswordMan.Controllers
         }
 
         // GET api/<PasswordController>/5
-        [HttpGet("{id:int}/{decrypt:int?}")]
+        [HttpGet("/api/Password/one")]
         public ActionResult<List<Password>> Get(int id, int decrypt = 0)
         {
             // Convert decrypt parameter from int to bool
@@ -82,7 +82,7 @@ namespace PasswordMan.Controllers
         }
 
         // PUT api/<PasswordController>/5
-        [HttpPut("{id}")]
+        [HttpPut]
         public ActionResult<Password> Put(int id, [FromBody] Password password)
         {
             Password foundPassword = _passwordRepository.UpdatePassword(id,password);
@@ -97,7 +97,7 @@ namespace PasswordMan.Controllers
         }
 
         // DELETE api/<PasswordController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public ActionResult<Password> Delete(int id)
         {
             Password foundPassword = _passwordRepository.DeletePassword(id);
