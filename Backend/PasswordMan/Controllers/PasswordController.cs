@@ -35,15 +35,8 @@ namespace PasswordMan.Controllers
                 decryptPasswords = true;
             }
             List<Password> passwordList = _passwordRepository.GetPasswordsByUser(username, decryptPasswords);
-            if (passwordList.Count > 0) 
-            {
-                return Ok(passwordList);
-            }
-            else
-            {
-                // If the list is empty, return NotFound 404 Status Code
-                return NotFound();
-            }
+
+            return Ok(passwordList);
         }
 
         // GET api/<PasswordController>/5
