@@ -3,7 +3,6 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { MatDialogRef ,MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-new-password-dialog',
@@ -64,7 +63,13 @@ export class NewPasswordDialogComponent implements OnInit {
     }
     else
     {
-      this.updatePassword();
+
+      if (this.passwordAdd.valid)
+      {
+        this.updatePassword();
+      } else{
+        alert("Please fill the form correctly")
+      }
     }
     
   }

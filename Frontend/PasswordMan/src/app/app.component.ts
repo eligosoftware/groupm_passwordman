@@ -105,7 +105,4 @@ export class AppComponent implements OnInit{
     }
     
   }
-  clearFilterUsername(){
-    
-  }
 }
